@@ -6,7 +6,7 @@
 - [Technologies Used](#technologies-used)
 - [Architecture](#architecture)
 - [Source Code](#source-code)
-- [Demo Video](#demo-video)
+- [Demo Video]([#demo-video](https://github.com/Asmi-Rajbhar/Blockchain-Based-Intelligent-Scholarship-Portal/releases/tag/demo-v1))
 
 ---
 
