@@ -55,6 +55,6 @@ You can find the full source code in this repository:
 ## Demo Videos
 
 Here are the demonstration videos showcasing different parts of the project:  
-
-1. [Frontend + Database Demo](https://github.com/Asmi-Rajbhar/Blockchain-Based-Intelligent-Scholarship-Portal/releases/download/v1.0.0/Frontend_and_Database_Demo.mp4)  
-2. [Network Configuration Setup](https://github.com/Asmi-Rajbhar/Blockchain-Based-Intelligent-Scholarship-Portal/releases/download/v1.0.0/Network_Configuration_Setup.mp4)  
+https://github.com/Asmi-Rajbhar/Blockchain-Based-Intelligent-Scholarship-Portal/releases/download/demo-v1/Frontend_and_Database_Demo.mkv
+1. [Frontend + Database Demo](https://github.com/Asmi-Rajbhar/Blockchain-Based-Intelligent-Scholarship-Portal/releases/download/demo-v1/Frontend_and_Database_Demo.mkv)  
+2. [Network Configuration Setup](https://github.com/Asmi-Rajbhar/Blockchain-Based-Intelligent-Scholarship-Portal/releases/download/demo-v1/Network_Configuration_Setup.mkv)  
