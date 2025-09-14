@@ -1,0 +1,18 @@
+.slider-container {
+    max-width: 1200px;
+    margin: auto;
+    overflow: hidden;
+    text-align: center;
+}
+  
+.slider-image {
+    width: 100%;
+    height: auto;
+    transition: opacity 0.5s ease-in-out;
+    height: 200px;
+}
+
+
+
+
+  

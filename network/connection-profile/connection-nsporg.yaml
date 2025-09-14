@@ -1,0 +1,53 @@
+name: "fabric_test_nsporg"
+version: "3.7"
+
+client:
+  organization: NSPOrg
+  credentialStore:
+    path: /tmp/hfc-kvs-nsporg
+    cryptoStore:
+      path: /tmp/hfc-cvs-nsporg
+  connection:
+    timeout:
+      peer:
+        endorser: 300
+      orderer: 300
+
+organizations:
+  NSPOrg:
+    mspid: NspOrgMSP
+    peers:
+      - peer0.nsporg.isp.com
+    certificateAuthorities:
+      - ca.nsporg.isp.com
+    adminPrivateKey:
+      path: ../organizations/peerOrganizations/nsporg.isp.com/users/Admin@nsporg.isp.com/msp/keystore/
+    signedCert:
+      path: ../organizations/peerOrganizations/nsporg.isp.com/users/Admin@nsporg.isp.com/msp/signcerts/
+
+peers:
+  peer0.nsporg.isp.com:
+    url: grpcs://localhost:7051
+    tlsCACerts:
+      path: /home/asmi-rajbhar/DemoFolder/network/organizations/peerOrganizations/nsporg.isp.com/peers/peer0.nsporg.isp.com/tls/ca.crt
+    grpcOptions:
+      ssl-target-name-override: peer0.nsporg.isp.com
+      hostnameOverride: peer0.nsporg.isp.com
+
+certificateAuthorities:
+  ca.nsporg.isp.com:
+    url: https://localhost:6054
+    caName: ca-nsporg
+    tlsCACerts:
+      path: ../organizations/peerOrganizations/nsporg.isp.com/ca/ca.nsporg.isp.com-cert.pem
+    httpOptions:
+      verify: false
+
+channels:
+  isp-channel:
+    peers:
+      peer0.nsporg.isp.com:
+        endorsingPeer: true
+        chaincodeQuery: true
+        ledgerQuery: true
+        eventSource: true

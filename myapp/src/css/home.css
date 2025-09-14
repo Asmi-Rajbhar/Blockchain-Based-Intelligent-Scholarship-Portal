@@ -1,0 +1,90 @@
+/* Home Page - General Styles */
+.hhome1 {
+    display: flex;
+    justify-content: space-around;  
+    align-items: center;  
+    flex-wrap: wrap;  
+    margin-top: 50px;
+    padding: 30px 90px;  
+}
+
+
+.hcard1, .hcard2, .hcard3 {
+    background-color: pink;
+    color: white;
+    padding: 20px; 
+    width: 250px;  
+    height: 200px;  
+    display: flex;  
+    justify-content: center;
+    align-items: center;
+    text-align: center;  
+    border-radius: 8px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);  
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin: 10px; 
+    cursor: pointer;  
+}
+
+/* Link styling to make cards clickable */
+.hcardLink {
+    display: block;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;  
+    color: inherit;  
+}
+
+/* Card Content - Text Styling */
+.card-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    font-size: 1.2rem;  
+    font-weight: bold;
+    color: white;  
+}
+
+/* Individual colors for each card */
+.hcard1 {
+    background-color: #F7768D; 
+}
+
+.hcard2 {
+    background-color: #D870C7;  
+}
+
+.hcard3 {
+    background-color: #36AAC9;  
+}
+
+/* Hover effect on cards */
+.hcard1:hover, .hcard2:hover, .hcard3:hover {
+    transform: scale(1.05);  
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);  
+}
+
+/* Media Query for Larger Screens up to 2000x1080 */
+@media (max-width: 2000px) and (max-height: 1080px) {
+    .hhome1 {
+        padding: 30px 150px; 
+    }
+}
+
+/* Media Query for Mobile Devices */
+@media (max-width: 768px) {
+    .hhome1 {
+        padding: 20px; 
+        flex-direction: column;  
+        justify-content: center;
+    }
+
+    .hcard1, .hcard2, .hcard3 {
+        width: 100%;  
+        height: auto;  
+        margin: 10px 0;  
+        font-size: 1rem;  
+    }
+}

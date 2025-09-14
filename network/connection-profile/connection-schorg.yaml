@@ -1,0 +1,53 @@
+name: "fabric_test_schorg"
+version: "3.7"
+
+client:
+  organization: SchOrg
+  credentialStore:
+    path: /tmp/hfc-kvs-schorg
+    cryptoStore:
+      path: /tmp/hfc-cvs-schorg
+  connection:
+    timeout:
+      peer:
+        endorser: 300
+      orderer: 300
+
+organizations:
+  SchOrg:
+    mspid: SchOrgMSP
+    peers:
+      - peer0.schorg.isp.com
+    certificateAuthorities:
+      - ca.schorg.isp.com
+    adminPrivateKey:
+      path: ../organizations/peerOrganizations/schorg.isp.com/users/Admin@schorg.isp.com/msp/keystore/
+    signedCert:
+      path: ../organizations/peerOrganizations/schorg.isp.com/users/Admin@schorg.isp.com/msp/signcerts/
+
+peers:
+  peer0.schorg.isp.com:
+    url: grpcs://localhost:8051
+    tlsCACerts:
+      path: ../organizations/peerOrganizations/schorg.isp.com/peers/peer0.schorg.isp.com/tls/ca.crt
+    grpcOptions:
+      ssl-target-name-override: peer0.schorg.isp.com
+      hostnameOverride: peer0.schorg.isp.com
+
+certificateAuthorities:
+  ca.schorg.isp.com:
+    url: https://localhost:8054
+    caName: ca-schorg
+    tlsCACerts:
+      path: ../organizations/peerOrganizations/schorg.isp.com/ca/ca.schorg.isp.com-cert.pem
+    httpOptions:
+      verify: false
+
+channels:
+  isp-channel:
+    peers:
+      peer0.schorg.isp.com:
+        endorsingPeer: true
+        chaincodeQuery: true
+        ledgerQuery: true
+        eventSource: true

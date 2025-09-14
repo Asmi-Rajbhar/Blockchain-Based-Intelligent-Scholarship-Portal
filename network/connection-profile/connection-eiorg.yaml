@@ -1,0 +1,53 @@
+name: "fabric_test_eiorg"
+version: "3.7"
+
+client:
+  organization: EIOrg
+  credentialStore:
+    path: /tmp/hfc-kvs-eiorg
+    cryptoStore:
+      path: /tmp/hfc-cvs-eiorg
+  connection:
+    timeout:
+      peer:
+        endorser: 300
+      orderer: 300
+
+organizations:
+  EIOrg:
+    mspid: EiOrgMSP
+    peers:
+      - peer0.eiorg.isp.com
+    certificateAuthorities:
+      - ca.eiorg.isp.com
+    adminPrivateKey:
+      path: ../organizations/peerOrganizations/eiorg.isp.com/users/Admin@eiorg.isp.com/msp/keystore/
+    signedCert:
+      path: ../organizations/peerOrganizations/eiorg.isp.com/users/Admin@eiorg.isp.com/msp/signcerts/
+
+peers:
+  peer0.eiorg.isp.com:
+    url: grpcs://localhost:9051
+    tlsCACerts:
+      path: ../organizations/peerOrganizations/eiorg.isp.com/peers/peer0.eiorg.isp.com/tls/ca.crt
+    grpcOptions:
+      ssl-target-name-override: peer0.eiorg.isp.com
+      hostnameOverride: peer0.eiorg.isp.com
+
+certificateAuthorities:
+  ca.eiorg.isp.com:
+    url: https://localhost:7054
+    caName: ca-eiorg
+    tlsCACerts:
+      path: ../organizations/peerOrganizations/eiorg.isp.com/ca/ca.eiorg.isp.com-cert.pem
+    httpOptions:
+      verify: false
+
+channels:
+  isp-channel:
+    peers:
+      peer0.eiorg.isp.com:
+        endorsingPeer: true
+        chaincodeQuery: true
+        ledgerQuery: true
+        eventSource: true

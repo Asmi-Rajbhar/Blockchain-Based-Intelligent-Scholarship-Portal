@@ -1,0 +1,7 @@
+{
+  "type": "module",
+  "dependencies": {
+    "fabric-ca-client": "^2.2.20",
+    "fabric-network": "^2.2.20"
+  }
+}
