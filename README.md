@@ -6,7 +6,7 @@
 - [Technologies Used](#technologies-used)
 - [Architecture](#architecture)
 - [Source Code](#source-code)
-- [Demo Video]([#demo-video](https://github.com/Asmi-Rajbhar/Blockchain-Based-Intelligent-Scholarship-Portal/releases/tag/demo-v1))
+- [Demo Videos](#demo-videos)
 
 ---
 
@@ -31,7 +31,7 @@ Key objectives:
 ---
 
 ## Technologies Used
-- **Backend:** Php, Golang (Smart Contracts)
+- **Backend:** PHP, Golang (Smart Contracts)
 - **Blockchain:** Hyperledger Fabric
 - **Database:** PostgreSQL
 - **Frontend:** React.js
@@ -45,3 +45,16 @@ Key objectives:
 - PostgreSQL stores user info and scholarship metadata.
 
 ---
+
+## Source Code
+You can find the full source code in this repository:  
+[👉 Blockchain-Based Intelligent Scholarship Portal](https://github.com/Asmi-Rajbhar/Blockchain-Based-Intelligent-Scholarship-Portal)
+
+---
+
+## Demo Videos
+
+Here are the demonstration videos showcasing different parts of the project:  
+
+1. [Frontend + Database Demo](https://github.com/Asmi-Rajbhar/Blockchain-Based-Intelligent-Scholarship-Portal/releases/download/v1.0.0/Frontend_and_Database_Demo.mp4)  
+2. [Network Configuration Setup](https://github.com/Asmi-Rajbhar/Blockchain-Based-Intelligent-Scholarship-Portal/releases/download/v1.0.0/Network_Configuration_Setup.mp4)  
